@@ -1,0 +1,22 @@
+
+syntax = "proto3";
+
+package hello;
+
+//replace this with you own github username and password 
+// github.com/nitinvdubey89/my-grpc-proto/protogen/go/hello
+
+option go_package = "github.com/nitinvdubey89/my-grpc-proto/protogen/go/hello";
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string greet = 1;
+}
+
+// simple unary GRPC service
+service HelloService {
+  rpc SayHello(HelloRequest) returns (HelloResponse) {}
+}

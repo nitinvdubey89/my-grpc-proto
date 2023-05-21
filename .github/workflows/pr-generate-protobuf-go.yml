@@ -23,7 +23,7 @@ jobs:
            check-latest : true 
            cache : true 
           
-      -name: Generate go Source 
-       shell: bash
-       run: 
-        make pipeline-build 
+      - name: Generate go Source 
+        shell: bash
+        run: 
+         make pipeline-build 
